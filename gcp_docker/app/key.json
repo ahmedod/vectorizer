@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "landmark-project-267511",
+  "private_key_id": "47fa80d3f8bfc552511da69c9c1a52904ed71f41",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQClDD3NI8RYeA0k\nMHHTQw112zJGjQGrSsLvA2TCJKMGmSUtAZBqpyqSI36qFBZ2dOBQsxqQPoYt44jz\n6Cgr07HalkNY62IsZiI7PVtFPQ7mCzjCM/xuMmqs5g4WVNGAmTGz3q37ktZiiPi2\nhQP6V0DsXEvd3T6kL4DebGu0AUgSNdYEje0NbzC+zBtSooZy19cWepbPCwCbALAg\nXL73F/DuE5qfTwQH0xooWa31uczSvKA05Tc8qM9gKMTL6jFssYI2jG365kaCnwWQ\nMAo+r42URYXO0tiI1wRptVDhyX074OOfw56Md4U+0/5m2XhCs7g+Xuc4W9WptY9k\n3hkub4qVAgMBAAECggEACpLOsMIuVXaXbO6XlC+zAI5i2ac16KnY9CP1BAUB1q3f\n9lKn1FVSQlt4xV+VEtCpADKBLKV8xhrSDsIcNLaSqcy/ksY9m1eNsNrc6oIfXrhw\nUeyvqsWbFOmGFIMpisIFr56/6aJ+DoD04giCeTq2w42kJJoEZdNPP7CVc8ozOktT\nLg+A4cTiK5X5P6Zoz8TGm/5D/gcbEzDqtRovIrQAtdoyfFnUjIKptHzj0q0Dx1lY\nBgp1TBRa3iVtCBpBWuYoUuedd29TScXzvN7HN9q+LX5gLl5sQ2MwCzpvAFC6cKU+\nCDWIRdpG1pYnp4c9K0BV/FhX0i5W2mKNgqAc7Qz/wQKBgQDiJ1TeHRN57gkP/vy2\nl2vKsQnwzj1ooK28lR1ooRhGis6lGPkLMWowLRTeQTgA2ix4OEuA8BTmtQDXxvUf\nJxl1OHSDy2xpLQxGzqANIbh19r1s/qbXMDIhiDZBLGv96HmBEdp+LSGYUG/wcGdG\n21ZlqbsbyolAwtLz8G/2iWwINQKBgQC61G5x2lSVduhe2pLpi/91/LGtozOoe9Vp\nZ+OWTgCtSvoP7HLCCA9zpue+7uZQwB/CE1B99OsLTUSx32kELWq7vZ3xnwp7T/Lu\nY0PTnLVcMmWTLGOTPQ5n/hg25lBAGnFfuNUgxpek3jusyghr2RyNturw/NPj+MGg\nadAtu12E4QKBgBvxxDjV2uw8D36cgVmGiFk5WwMYWNou0Ij22/VrwnYk/LfFyDAr\n4PUm/Ocho+vnCYupWRsLj2magAopmWxKBolHeo42eqTcXiH5siktO3/IB0wKg08f\ns3IVRK708DslmK3sKNViej454jsRiJFm1NwnBum+Mwt/h1WBJjSOcnzpAoGAUgE4\nUSUCB3Df4fKSlYxrnwBBhPOjkwp3zAJbtPeb+HR2elLQtDYRgjP6eKYn1b3esrMD\nm6XLHXTW+DQVxk2hEbLTBuFGGoYnHVfYx6N7P3Knfwf21QPxtNelDUPeaaSxqtBY\nTECfAzDAhMFRHPV5QQLO8OQopWHkq2KGi+w3ykECgYEAwkVHgHe+5ss9UEGvQkD8\nTEJaiygV3FUNUSWaZX+ZB4x5razHU3PENgBOINX4Au3FyHHXzgGx+BQFDfeWUpeD\nvspNuFk8rWvDcb6fKmksFGpWyhSvCegrK34oXPvbolnUyl0INzE/REGAwV44WvtC\nfJws+KgiMgcaJwZRVpwEtek=\n-----END PRIVATE KEY-----\n",
+  "client_email": "dev-landmark-project@landmark-project-267511.iam.gserviceaccount.com",
+  "client_id": "112568018387200356424",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/dev-landmark-project%40landmark-project-267511.iam.gserviceaccount.com"
+}

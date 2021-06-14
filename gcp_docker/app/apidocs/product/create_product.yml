@@ -1,0 +1,25 @@
+Create a new product
+---
+tags:
+  - Product
+  
+post:
+  parameters:
+    - in: path
+      name: product_id
+      description: product_id
+    - in: path
+      name: product_name
+      description: product_name
+    - in: path
+      name: category
+      description: category
+responses:
+  201:
+    description: Product successfuly Created
+  400:
+    description: Bad request
+  401:
+    description: Unauthorized
+  500:
+    description: Error during creating of Product

@@ -1,0 +1,15 @@
+Get product info
+---
+tags:
+    - Product
+parameters:
+  - in: path
+    name: product_id
+    description: product_id
+responses:
+  200:
+    description: A list of data
+  400:
+    description: Error of data
+  500:
+    description: Internal Server Error

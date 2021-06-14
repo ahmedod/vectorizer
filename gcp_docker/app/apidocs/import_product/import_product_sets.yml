@@ -1,0 +1,23 @@
+import product sets
+---
+tags:
+  - Import product sets
+parameters:
+  - in: body
+    name: data
+    description: data to import product
+    schema:
+      type: object
+      properties:
+        gcs_uri:
+          type: string
+
+responses:
+  201:
+    description: Product successfuly registered
+  400:
+    description: Bad request
+  401:
+    description: Unauthorized
+  500:
+    description: Error during creating of Product

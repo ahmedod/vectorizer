@@ -1,0 +1,18 @@
+Get info about a reference image.
+---
+tags:
+    - Reference set
+parameters:
+  - in: path
+    name: product_id
+    description: data to add product set
+  - in: path
+    name: reference_image_id
+    description: reference_image_id
+responses:
+  200:
+    description: A list of data
+  400:
+    description: Error of data
+  500:
+    description: Internal Server Error

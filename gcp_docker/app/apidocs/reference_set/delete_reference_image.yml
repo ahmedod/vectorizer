@@ -1,0 +1,18 @@
+Delete a reference image.
+---
+tags:
+    - Reference set
+parameters:
+  - in: path
+    name: product_id
+    description: product_id
+  - in: path
+    name: reference_image_id
+    description: reference_image_id
+responses:
+  200:
+    description: Delete success
+  400:
+    description: Error of data
+  500:
+    description: Internal Server Error

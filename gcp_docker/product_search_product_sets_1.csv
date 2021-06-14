@@ -1,0 +1,6 @@
+gs://vectorizer_bucket/adidas_predator_rouge.jpg;shoesadidas0;product_set_adidas;adidas_id0;apparel-v2;    ;style=men,category=shoe,color=red;  
+gs://vectorizer_bucket/adidas_predator_rouge1.jpg;shoesadidas1;product_set_adidas;adidas_id1;apparel-v2;    ;style=men,category=shoe;
+gs://vectorizer_bucket/adidas_predator_rouge2.jpg;shoesadidas2;product_set_adidas;adidas_id2;apparel-v2;;style=men,category=shoe;
+gs://vectorizer_bucket/adidas_gazelle_gris.jpg;shoesadidas3;product_set_adidas;adidas_id3;apparel-v2;;style=men,category=shoe,color=gray;
+gs://vectorizer_bucket/adidas_gazelle_gris1.jpg;shoesadidas4;product_set_adidas;adidas_id4;apparel-v2;;style=men,category=shoe;
+gs://vectorizer_bucket/adidas_gazelle_gris2.jpg;shoesadidas5;product_set_adidas;adidas_id5;apparel-v2;;style=men,category=shoe;

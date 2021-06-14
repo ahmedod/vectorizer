@@ -1,0 +1,492 @@
+definitions: {}
+info:
+  description: powered by Flasgger
+  termsOfService: /tos
+  title: A swagger API
+  version: 0.0.1
+paths:
+  /v2/import_product/import_product_sets:
+    post:
+      parameters:
+        - description: data to import product
+          in: body
+          name: data
+          schema:
+            properties:
+              gcs_uri:
+                type: string
+            type: object
+      responses:
+        '201':
+          description: Product successfuly registered
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '500':
+          description: Error during creating of Product
+      summary: import product sets
+      tags:
+        - Import product sets
+  '/v2/product/create_product/{product_id}/product/{product_name}/category/{category}':
+    post:
+      parameters:
+        - description: product_id
+          in: path
+          name: product_id
+        - description: product_name
+          in: path
+          name: product_name
+        - description: category
+          in: path
+          name: category
+      responses:
+        '201':
+          description: Product successfuly Created
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '500':
+          description: Error during creating of Product
+      summary: Create a new product
+      tags:
+        - Product
+  '/v2/product/delete_product/{product_id}':
+    delete:
+      parameters:
+        - description: product_id
+          in: path
+          name: product_id
+          type: string
+          required: True
+      responses:
+        '200':
+          description: success
+        '400':
+          description: Error of data
+        '500':
+          description: Internal Server Error
+      summary: Delete product
+      tags:
+        - Product
+  /v2/product/delete_unassigned_product:
+    delete:
+      parameters:
+        - description: product_id
+          in: path
+          name: product_id
+          type: string
+          required: True
+      responses:
+        '200':
+          description: success
+        '400':
+          description: Error of data
+        '500':
+          description: Internal Server Error
+      summary: Delete unassigned product
+      tags:
+        - Product
+  '/v2/product/get_product/{product_id}':
+    get:
+      parameters:
+        - description: product_id
+          in: path
+          name: product_id
+          type: string
+          required: True
+      responses:
+        '200':
+          description: A list of data
+        '400':
+          description: Error of data
+        '500':
+          description: Internal Server Error
+      summary: Get product info
+      tags:
+        - Product
+  /v2/product/list_products:
+    get:
+      responses:
+        '200':
+          description: A list of data
+        '400':
+          description: Error of data
+        '500':
+          description: Internal Server Error
+      summary: list products
+      tags:
+        - Product
+  '/v2/product/update_product/{product_id}':
+    post:
+      parameters:
+        - description: data to add product set
+          in: path
+          name: product_id
+          type: string
+          required: True
+        - description: data to update product
+          in: body
+          name: data
+          schema:
+            properties:
+              key:
+                type: string
+              value:
+                type: string
+            type: object
+      responses:
+        '200':
+          description: A list of data
+        '400':
+          description: Error of data
+        '500':
+          description: Internal Server Error
+      summary: Update product info
+      tags:
+        - Product
+  /v2/product_product_set/add_product_to_product_set:
+    post:
+      parameters:
+        - description: product_id
+          in: query
+          name: product_id
+          required: true
+          type: string
+        - description: product_set_id
+          in: query
+          name: product_set_id
+          required: true
+          type: string
+      responses:
+        '201':
+          description: Product set successfuly registered
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '500':
+          description: Error during creating of Product
+      summary: Add a product set
+      tags:
+        - Product in product set management
+  /v2/product_product_set/list_products_in_product_set:
+    get:
+      parameters:
+        - description: product_set_id
+          in: query
+          name: product_set_id
+          required: true
+          type: string
+      responses:
+        '200':
+          description: A list of data
+        '400':
+          description: Error of data
+        '500':
+          description: Internal Server Error
+      summary: list a product set
+      tags:
+        - Product in product set management
+  /v2/product_product_set/purge_products_in_product_set:
+    delete:
+      parameters:
+        - description: product_set_id
+          in: query
+          name: product_set_id
+          required: true
+          type: string
+      responses:
+        '200':
+          description: product set successfully purged
+        '400':
+          description: Bad Request
+        '401':
+          description: Unauthorized
+        '404':
+          description: Not found
+        '500':
+          description: Internal Server Error
+      summary: purge a product set
+      tags:
+        - Product in product set management
+  /v2/product_product_set/remove_product_from_product_set:
+    delete:
+      parameters:
+        - description: product_id
+          in: query
+          name: product_id
+          required: true
+          type: string
+        - description: product_id
+          in: query
+          name: product_set_id
+          required: true
+          type: string
+      responses:
+        '200':
+          description: Data successfully removed
+        '400':
+          description: Bad Request
+        '401':
+          description: Unauthorized
+        '404':
+          description: Not found
+        '500':
+          description: Internal Server Error
+      summary: delete a product set
+      tags:
+        - Product in product set management
+  /v2/product_search/get_similar_products/file:
+    post:
+      consumes:
+         - multipart/form-data
+      parameters:
+        - in: formData
+          name: filename
+          required: true
+          type: file
+          
+        - description: data to add product set
+          in: query
+          name: product_set_id
+          required: true
+          type: string
+        - description: data to add product set
+          in: query
+          name: product_category
+          required: true
+          type: string
+        - description: data to add product set
+          in: query
+          name: filters
+          required: true
+          type: string
+      responses:
+        '201':
+          description: Product successfuly registered
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '500':
+          description: Error during creating of Product
+      summary: Get product search by file
+      tags:
+        - Product search
+  /v2/product_search/get_similar_products/uri:
+    post:
+      parameters:
+        - description: data to add product set
+          in: query
+          name: product_set_id
+          required: true
+          type: string
+        - description: data to add product set
+          in: query
+          name: product_category
+          required: true
+          type: string
+        - description: data to add product set
+          in: query
+          name: filters
+          required: true
+          type: string
+        - description: data to update product
+          in: body
+          name: data
+          schema:
+            properties:
+              gcs_uri:
+                type: string
+            type: object
+      responses:
+        '201':
+          description: Product successfuly registered
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '500':
+          description: Error during creating of Product
+      summary: Get product search by uri
+      tags:
+        - Product search
+  '/v2/product_set/create_product_set/{product_id}':
+    post:
+      parameters:
+        - description: data to add product set
+          in: path
+          name: product_id
+          required: true
+          type: string
+        - description: data to add product set
+          in: query
+          name: product_name
+          required: true
+          type: string
+      responses:
+        '201':
+          description: Product successfuly registered
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '500':
+          description: Error during creating of Product
+      summary: Add a product set
+      tags:
+        - Product set management
+  '/v2/product_set/delete_product_set/{product_id}':
+    delete:
+      parameters:
+        - description: data to add product set
+          in: path
+          name: product_id
+          required: true
+          type: string
+      responses:
+        '200':
+          description: product set successfully purged
+        '400':
+          description: Bad Request
+        '401':
+          description: Unauthorized
+        '404':
+          description: Not found
+        '500':
+          description: Internal Server Error
+      summary: delete a product set
+      tags:
+        - Product set management
+  '/v2/product_set/get_product_set_info/{product_set_id}':
+    get:
+      parameters:
+        - description: product_set_id
+          in: path
+          name: product_set_id
+          required: true
+          type: string
+      responses:
+        '201':
+          description: Product successfuly registered
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '500':
+          description: Error during creating of Product
+      summary: Get product set info
+      tags:
+        - Product set management
+  /v2/product_set/list_product_sets:
+    get:
+      responses:
+        '201':
+          description: Product successfuly registered
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '500':
+          description: Error during creating of Product
+      summary: List product sets
+      tags:
+        - Product set management
+  '/v2/reference_set/create_refrence_image/{product_id}/{reference_image_id}':
+    post:
+      parameters:
+        - description: data to add product set
+          in: path
+          name: product_id
+          type: string
+          required: True
+        - description: data to add product set
+          in: path
+          name: reference_image_id
+          type: string
+          required: True
+        - description: path to th input reference image.
+          in: body
+          name: gcs_uri
+          schema:
+            properties:
+              gcs_uri:
+                type: string
+            type: object
+      responses:
+        '200':
+          description: A list of data
+        '400':
+          description: Error of data
+        '500':
+          description: Internal Server Error
+      summary: Create a reference image.
+      tags:
+        - Reference set
+  '/v2/reference_set/delete_reference_image/{product_id}/{reference_image_id}':
+    delete:
+      parameters:
+        - description: product_id
+          in: path
+          name: product_id
+          type: string
+          required: True
+        - description: reference_image_id
+          in: path
+          name: reference_image_id
+          type: string
+          required: True
+      responses:
+        '200':
+          description: Delete success
+        '400':
+          description: Error of data
+        '500':
+          description: Internal Server Error
+      summary: Delete a reference image.
+      tags:
+        - Reference set
+  '/v2/reference_set/get_reference_image/{product_id}/{reference_image_id}':
+    get:
+      parameters:
+        - description: data to add product set
+          in: path
+          name: product_id
+          type: string
+          required: True
+        - description: reference_image_id
+          in: path
+          name: reference_image_id
+          type: string
+          required: True
+      responses:
+        '200':
+          description: A list of data
+        '400':
+          description: Error of data
+        '500':
+          description: Internal Server Error
+      summary: Get info about a reference image.
+      tags:
+        - Reference set
+  '/v2/reference_set/list_reference_image/{product_id}/':
+    get:
+      parameters:
+        - description: product_id
+          in: path
+          name: product_id
+          type: string
+          required: True
+      responses:
+        '200':
+          description: A list of data
+        '400':
+          description: Error of data
+        '500':
+          description: Internal Server Error
+      summary: List all Reference images in a product.
+      tags:
+        - Reference set
+swagger: '2.0'

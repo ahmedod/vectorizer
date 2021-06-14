@@ -1,0 +1,24 @@
+delete a product set
+---
+tags:
+  - Product set management
+
+parameters:
+  - name: product_id
+    in: path
+    description: data to add product set
+    type: string
+    required: true
+
+
+responses:
+  200:
+    description: product set successfully purged
+  400:
+    description: Bad Request
+  401:
+    description: Unauthorized
+  404:
+    description: Not found
+  500:
+    description: Internal Server Error

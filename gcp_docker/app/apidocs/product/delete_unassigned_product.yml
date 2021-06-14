@@ -1,0 +1,15 @@
+Delete unassigned product
+---
+tags:
+    - Product
+parameters:
+  - in: path
+    name: product_id
+    description: product_id
+responses:
+  200:
+    description: success 
+  400:
+    description: Error of data
+  500:
+    description: Internal Server Error

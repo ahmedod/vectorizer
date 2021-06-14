@@ -1,0 +1,35 @@
+Get product search by file
+---
+tags:
+  - Product search
+parameters:
+  - name: filename
+    required: True
+    in: formData
+    type: file
+  - name: product_set_id
+    in: query
+    description: data to add product set
+    type: string
+    required: true
+  - name: product_category
+    in: query
+    description: data to add product set
+    type: string
+    required: true
+  - name: filters
+    in: query
+    description: data to add product set
+    type: string
+    required: false
+
+responses:
+  201:
+    description: Product successfuly registered
+  400:
+    description: Bad request
+  401:
+    description: Unauthorized
+  500:
+    description: Error during creating of Product
+

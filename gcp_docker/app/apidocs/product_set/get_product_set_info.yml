@@ -1,0 +1,22 @@
+Get product set info
+---
+tags:
+  - Product set management
+
+parameters:
+    - name: product_set_id
+      in: path
+      description: product_set_id
+      type: string
+      required: True
+
+responses:
+  201:
+    description: Product successfuly registered
+  400:
+    description: Bad request
+  401:
+    description: Unauthorized
+  500:
+    description: Error during creating of Product
+
